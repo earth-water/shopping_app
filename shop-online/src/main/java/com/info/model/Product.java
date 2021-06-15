@@ -111,6 +111,15 @@ public class Product {
 	public void setProductUnit(int productUnit) {
 		this.productUnit = productUnit;
 	}
+
+
+	@Override
+	public String toString() {
+		return " productName=" + productName;
+	}
+
+
+	
 	
 	
 }

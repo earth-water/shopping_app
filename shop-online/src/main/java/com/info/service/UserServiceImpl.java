@@ -1,5 +1,7 @@
 package com.info.service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -51,6 +53,34 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public void deleteUser(long userId) {
 		userRepository.deleteById(userId);
+	}
+
+	@Override
+	public void emptyCart(User user) {
+		List<Product> productlist = (userRepository.findByEmail(user.getEmail())).getProductList();
+		productlist.clear();
+		user.setProductList(productlist);
+		userRepository.save(user);	
+	}
+
+	@Override
+	public void removeFromCart(Product product,User user) {
+		System.out.println("product to remove is"+product);
+		List<Product> productlist = user.getProductList();
+		List<Product> productlist1=new ArrayList<>();
+		int size=productlist.size();
+		for(int i=0;i<size-1;i++)
+		{
+			System.out.println("considering product"+productlist.get(i));
+			if(!productlist.get(i).equals(product))
+			{
+				System.out.println(productlist.get(i)+"kept");
+				productlist1.add(productlist.get(i));
+			}
+		}
+		user.setProductList(productlist1);
+		userRepository.save(user);		
+		
 	}
 
 }

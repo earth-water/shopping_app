@@ -17,8 +17,8 @@
 <meta charset="ISO-8859-1">
 <title>shop online</title>
 </head>
-<body>
-	<div class="container">
+<body >
+	<div  class="container">
 		<div
 			style="width: 600px; margin-left: auto; margin-right: auto; margin-top: 24px; padding: 24px;">
 			<div class="card">

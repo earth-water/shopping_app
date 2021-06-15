@@ -10,7 +10,7 @@
 		</div>
 	</div>
 
-	<table class="table my-5">
+	<table class="table table-striped my-5">
 		<thead>
 			<tr>
 				<th scope="col">Id</th>

@@ -9,7 +9,7 @@
 					href="/manager/product-form">Manage Product</a>
 			</div>
 
-		<table class="table col-7">
+		<table class="table table-striped col-7">
 			<thead>
 				<tr>
 					<th scope="col">Id</th>

@@ -13,21 +13,24 @@
 	    		rel="stylesheet">
 	    		<link href="webjars/font-awesome/4.7.0/css/font-awesome.min.css"
 	    		rel="stylesheet">
+	    		<link rel="preconnect" href="https://fonts.gstatic.com">
+
+	    		
 	    		
 <meta charset="ISO-8859-1">
 <title>shop online</title>
 </head>
-<body>
+<body  >
 
 
 	<!-- Fragment #2 : Navbar contains nav links -->
 	<div >
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark"  >
 			<div class="container">
-			<a class="navbar-brand" href="#">Online Shopping</a>
+			<a class="navbar-brand" href="#">Cartize</a>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
+			<div  class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="nav navbar-nav mr-auto">
 					<li class="nav-item"><a class="nav-link" 
 						href="/index"><i class="fa fa-home mr-2"></i>Home</a></li>
 						
