@@ -10,7 +10,7 @@
 		<ul class="nav nav-pills">
 
 			<c:forEach items="${categoryList}" var="category">
-				<li  class="nav-item"><a class="list-group-item mr-2" style="background: #A3D5FF" 
+				<li  class="nav-item"><a class="list-group-item mr-2"  
 					href="/getProducts/${category.categoryId}">${category.categoryName}</a>
 				</li>
 
@@ -24,9 +24,9 @@
 	<div class="row">
 
 		<c:forEach items="${productList}" var="product">
-			<div class="col-sm-4">
-				<div  class="card mt-4">
-					<img src="${product.image}" class="card-img-top"
+			<div class="col-6  col-sm-4">
+				<div   class="card mt-4 ">
+					<img src="data:image/jpg;base64,${product.image}"   class="card-img-top"
 						alt="Product Image">
 					<div class="card-body">
 						<h5 class="card-title">${product.productName}</h5>

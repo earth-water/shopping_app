@@ -14,7 +14,7 @@
 			<c:forEach items="${user.productList}" var="product">
 			<ul class="list-group col-9" >
 				<li  class="list-group-item d-flex justify-content-around">
-					<img src="${product.image}"  height="100"> 
+					<img src="data:image/jpg;base64,${product.image}" height="100"> 
 					<span class="my-auto" >${product.productName}</span> 
 					<span class="my-auto" >${product.productPrice}</span>
 					<span class="my-auto" >

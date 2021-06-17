@@ -25,30 +25,7 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter{
 		auth.userDetailsService(userPrincipalDetailService).passwordEncoder(passwordEncoder());
 	}
 
-//	@Override
-//	protected void configure(HttpSecurity http) throws Exception {
-//		http
-//			.authorizeRequests()
-//			.antMatchers("/index","/signup","/login","/resources/**").permitAll()
-////			.antMatchers("/**","/resources/**").permitAll()
-//			.antMatchers("/profile/**").authenticated()
-////			.antMatchers("/admin/**").hasRole("ADMIN")
-//			.antMatchers("/admin/**").access("hasRole('ADMIN')")
-////			.antMatchers("/manager/**").hasAnyRole("MANAGER","ADMIN")
-//			.antMatchers("/manager/**").access("hasRole('ADMIN') or hasRole('USER')")
-//			.and()
-//			.formLogin()
-//			.loginPage("/login")
-//			.usernameParameter("email")
-//			.passwordParameter("password")
-//			.and()
-//			.logout()
-//			.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-//			.logoutSuccessUrl("/login")
-//			.and()
-//			.rememberMe().tokenValiditySeconds(30000).key("WhatEver!")
-//			.rememberMeParameter("checkRememberMe");
-//	}
+
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {

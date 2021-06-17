@@ -1,5 +1,8 @@
 package com.info.controller;
 
+import java.io.IOException;
+import java.util.Base64;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +18,6 @@ import com.info.config.UserPrincipal;
 import com.info.model.Category;
 import com.info.model.Product;
 import com.info.service.CategoryService;
-import com.info.service.FileUploadService;
 import com.info.service.ProductService;
 
 @Controller
@@ -30,8 +32,6 @@ public class ManagerController {
 	@Autowired
 	private ProductService productService;
 	
-	@Autowired
-	private FileUploadService fileUploadService;
 
 	@GetMapping("index")
 	public String index() {
@@ -78,16 +78,41 @@ public class ManagerController {
 		return mv;
 	}
 
+//	@PostMapping("add-product")
+//	public ModelAndView addProduct(@ModelAttribute("product") Product product, @RequestParam("file") MultipartFile file) {
+//		ModelAndView mv = new ModelAndView("manager/product-form");
+//		System.out.println("file: " + file.getOriginalFilename());
+//		String filePath = fileUploadService.upload(file);
+//		product.setImage(filePath);
+//		
+//		System.out.println(product.getImage());
+//		
+//		productService.addProduct(product);
+//		mv.addObject("productList", productService.listProduct());
+//		return mv;
+//	}
+	
 	@PostMapping("add-product")
 	public ModelAndView addProduct(@ModelAttribute("product") Product product, @RequestParam("file") MultipartFile file) {
 		ModelAndView mv = new ModelAndView("manager/product-form");
-		System.out.println("file: " + file.getOriginalFilename());
-		String filePath = fileUploadService.upload(file);
-		product.setImage(filePath);
 		
-		System.out.println(product.getImage());
+	
 		
+		try {
+			product.setImage(Base64.getEncoder().encodeToString(file.getBytes()));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("is this it");
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		/////
 		productService.addProduct(product);
+		
+		mv.addObject("categoryList",categoryService.listCategory());
 		mv.addObject("productList", productService.listProduct());
 		return mv;
 	}

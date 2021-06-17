@@ -10,7 +10,7 @@
 		</div>
 	</div>
 
-	<table class="table table-striped my-5">
+	<table class="table  my-5">
 		<thead>
 			<tr>
 				<th scope="col">Id</th>
@@ -27,7 +27,7 @@
 			<c:forEach items="${productList}" var="product">
 				<tr>
 					<th scope="row">${product.productId}</th>
-					<td><img src="${product.image}" width="300px"></td>
+					<td><img src="data:image/jpg;base64,${product.image}" width="300px"></td>
 					<td>${product.productName}</td>
 					<td>${product.productDescription}</td>
 					<td>${product.productPrice}</td>
