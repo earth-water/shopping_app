@@ -31,9 +31,16 @@
 				<li  class="list-group-item d-flex justify-content-end">
 					<span class="h6" >Total : ${total}</span>
 				</li>
+				<c:if test="${total>0}">
 				<li   class="list-group-item d-flex justify-content-end">
-					<a href="/profile/checkOut" type="button" class="btn btn-primary">Check Out</a>
+					<a href="/profile/checkOut" type="button" class="btn btn-primary " >Check Out</a>
 				</li>
+				</c:if>
+				<c:if test="${total==0}">
+				<li   class="list-group-item d-flex justify-content-end">
+					<a href="/profile/checkOut" type="button" class="btn btn-primary disabled" >Check Out</a>
+				</li>
+				</c:if>
 			</ul>
 		</div>
 	</div>

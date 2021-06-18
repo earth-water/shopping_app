@@ -2,24 +2,25 @@
 <div class="container" >
 	<h1 class="display-5">Product Overview</h1>
 
-	<div class="d-flex justify-content-start p-2" >
-		<a class="list-group-item mr-2" href="/allProduct">All Product</a>
+	
+	<div class="nav nav-tabs">
+		<div class="nav-item"><a class="list-group-item mr-2" href="/allProduct">All Product</a></div>
 
 
 
-		<ul class="nav nav-pills">
+		
 
 			<c:forEach items="${categoryList}" var="category">
-				<li  class="nav-item"><a class="list-group-item mr-2"  
+				<div  class="nav-item"><a class="list-group-item mr-2"  
 					href="/getProducts/${category.categoryId}">${category.categoryName}</a>
-				</li>
+				</div>
 
 
 			</c:forEach>
-		</ul>
+		</div>
 
 
-	</div>
+	
 
 	<div class="row">
 

@@ -13,7 +13,7 @@
 <script src="webjars/jquery/3.0.0/jquery.min.js" type="text/javascript"></script>
 <link href="webjars/bootstrap/4.4.1/css/bootstrap.min.css"
 	rel="stylesheet">
-	<script src="webjars/bootstrap/4.4.1/bootstrap.min.js" type="text/javascript"></script>
+	<script src="webjars/bootstrap/4.4.1/js/bootstrap.min.js" type="text/javascript"></script>
 <link href="webjars/font-awesome/4.7.0/css/font-awesome.min.css"
 	rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
